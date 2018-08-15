@@ -29,3 +29,4 @@ test('Horse of 33 days calculates proper weight', () => {
   const horse = new Horse(33)
   expect(horse.getWeightInKg(33)).toBe(56.1)
 })
+

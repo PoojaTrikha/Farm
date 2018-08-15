@@ -7,18 +7,19 @@ class Animal {
     getValueInEuros(){
         return this.getWeightInKg() * this.price
     }
+   
 
 }
 
 class Pig extends Animal {
     constructor(Age, price) {
         super(Age)
-        this.price = 1.5
+        this.price = 4
         
     }
     getWeightInKg() {
     
-        return this.Age * 2.3
+        return Math.min(this.Age * 2.3,700)
 
     }
 }
@@ -26,13 +27,13 @@ class Pig extends Animal {
 class Cow extends Animal {
     constructor(Age, price) {
         super(Age)
-        this.price = 4
+        this.price = 5
         
     }
 
     getWeightInKg() {
 
-        return this.Age * 1.5
+        return Math.min(this.Age * 1.5, 1200)
     }
 }
 
@@ -45,7 +46,7 @@ class Horse extends Animal {
 
     getWeightInKg() {
      
-        return this.Age * 1.7
+        return Math.min(this.Age * 1.7,1000)
     }
 }
 
