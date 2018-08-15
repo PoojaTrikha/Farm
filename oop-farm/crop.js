@@ -1,30 +1,22 @@
 // crops.js
-class Wheat {
+class Crop {
     constructor(acres) {
-      this.acres = acres
-    }
-  
+     this.acres = acres
+   }
+ }
+
+class Wheat extends Crop {
     getYieldInKg() {
       return Math.pow(this.acres * 1.5, 1.3)
     }
   }
 
-class SugarCane{
-
-    constructor(acres) {
-        this.acres = acres
-      }
-    
-      getYieldInKg() {
+class SugarCane extends Crop{
+    getYieldInKg() {
         return Math.pow(this.acres * 2.6,1.1)
       }
 
 }
 
-class Crop {
-    constructor(acres) {
-      this.acres = acres
-    }
-  }
 
- module.exports = { Wheat,Crop, SugarCane }
+ module.exports = { Wheat, Crop, SugarCane }
