@@ -1,7 +1,21 @@
 // index.js
 class Farm {
-    constructor(name) {
-       this.name = name
-    }
+  constructor(name) {
+    this.name = name
+    this.crops = []
   }
-  module.exports.Farm = Farm
+  addCrop(crop) {
+    this.crops.push(crop)
+  }
+  calculateIncome() {
+    return this.crops.map(crop => crop.getYieldInEuros())
+  }
+  calculateIncome() {
+    return this.crops
+      .map(crop => crop.getYieldInEuros())
+      .reduce((a, b) => a + b, 0)
+  }
+}
+
+module.exports = { Farm }
+//const {Crop } = require('./crop')
