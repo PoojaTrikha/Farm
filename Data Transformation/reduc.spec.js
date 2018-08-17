@@ -1,4 +1,4 @@
-const {oldestSoFar } = require('./reduc')
+const {oldestSoFar, groupEvenUneven } = require('./reduc')
 
 test('oldestSoFar determines the oldest person in a collection', () => {
     const people = [
